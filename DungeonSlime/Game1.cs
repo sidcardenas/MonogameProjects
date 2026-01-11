@@ -13,14 +13,13 @@ public class Game1 : Game
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
+        //_graphics.IsFullScreen = true;
         IsMouseVisible = true;
     }
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-
-        // Test commit
 
         base.Initialize();
     }
@@ -39,12 +38,14 @@ public class Game1 : Game
 
         // TODO: Add your update logic here
 
+        var elapsed = gameTime.ElapsedGameTime.TotalSeconds;
+
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.AntiqueWhite);
 
         // TODO: Add your drawing code here
 
